@@ -5,9 +5,9 @@
 	---
 	Currently configured to create HTTP Status Cats ErrorDocuments
 	(https://http.cat/)
-	but this can be changed on line 16
+	but this can be changed on line 20
 	---
-	Reads from "errors.txt" (file with one error code per line, see HTTP Status Cats sample in repo)
+	Reads from "errors.txt" (file with one error code per line, see HTTP Status Cats sample in repo - error_doc_list.txt)
 """
 	
 
@@ -17,7 +17,7 @@ try:
 		try:
 			with open('error_doc_list.txt','a') as error_doc_list:
 				try:
-					print ('ErrorDocument '+a_error.rstrip('\n')+' \'<style> body{background-color: #000000} iframe{display: block; margin-left: auto; margin-right: auto; width:750px; height:600px; border:none} </style> <iframe src="https://http.cat/'+a_error.rstrip('\n')+'"></iframe>', file=error_doc_list)
+					print ('ErrorDocument '+a_error.rstrip('\n')+' \'<style> body{background-color: #000000} img{display: block; margin-left: auto; margin-right: auto; width:750px; height:600px; border:none} </style> <img src="https://http.cat/'+a_error.rstrip('\n')+'"></img>', file=error_doc_list)
 				except ValueError:
 					pass
 		except IOError as err:
