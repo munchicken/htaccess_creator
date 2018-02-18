@@ -4,7 +4,7 @@ Creates ErrorDocument statements for Apache htaccess files
 Just copy and paste into your config file for your website
 ***
 Currently configured to create HTTP Status Cats ErrorDocuments (https://http.cat/)
-but this can be changed on line 16
+but this can be changed on line 20
 ***
 Reads from "errors.txt" (file with one error code per line, see HTTP Status Cats sample in repo)
 
